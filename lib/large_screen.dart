@@ -7,7 +7,10 @@ class LargeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.green,
-      child: const Center(child: Text("Large Screen")),
+      child: Row(children: [
+        Expanded(child: Container(color: Colors.orange[400])),
+        Expanded(child: Container(color: Colors.orange[400])),
+      ]),
     );
   }
 }
