@@ -8,13 +8,15 @@ class SmallScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
     return Column(
       children: [
         const NavBar(),
         Expanded(
           child: Container(
             color: Colors.transparent,
-            child: const Center(child: CustomText(text: "Small Screen")),
+            child: Center(
+                child: CustomText(text: "Small Screen with width: $_width")),
           ),
         )
       ],

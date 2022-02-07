@@ -4,6 +4,7 @@ const int largeScreenSize = 1366;
 const int mediumScreenSize = 768;
 const int smallScreenSize = 360;
 const int customScreenSize = 1100;
+const int customSmallScreenSize = 550;
 
 class ResponsiveLayout extends StatelessWidget {
   final Widget largeScreen;
@@ -22,6 +23,10 @@ class ResponsiveLayout extends StatelessWidget {
 
   static bool isSmallScreen(BuildContext context) =>
       _widthSize(context) < mediumScreenSize;
+
+  static bool isCustomSmallScreen(BuildContext context) =>
+      _widthSize(context) > smallScreenSize &&
+      _widthSize(context) > customSmallScreenSize;
 
   static bool isMediumScreen(BuildContext context) =>
       _widthSize(context) >= mediumScreenSize &&
