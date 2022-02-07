@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:k_events_admin/large_screen.dart';
-import 'package:k_events_admin/responsive_layout.dart';
+import 'package:k_events_admin/widgets/large_screen.dart';
+import 'package:k_events_admin/widgets/responsive_layout.dart';
 
-import 'small_screen.dart';
+import 'widgets/small_screen.dart';
 
 class SiteLayout extends StatelessWidget {
   const SiteLayout({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class SiteLayout extends StatelessWidget {
         key: scaffoldKey,
         body: ResponsiveLayout(
           largeScreen: LargeScreen(scaffoldKey: scaffoldKey),
-          smallScreen: SmallScreen(),
+          smallScreen: const SmallScreen(),
         ));
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:k_events_admin/constants/color.dart';
-import 'package:k_events_admin/responsive_layout.dart';
+import 'package:k_events_admin/widgets/responsive_layout.dart';
 
 import 'custom_text.dart';
 
