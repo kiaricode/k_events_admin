@@ -5,8 +5,11 @@ import 'custom_text.dart';
 import 'responsive_layout.dart';
 
 class NavBar extends StatelessWidget {
+  final GlobalKey<ScaffoldState>? scaffoldKey;
+
   const NavBar({
     Key? key,
+    this.scaffoldKey,
   }) : super(key: key);
 
   @override
@@ -29,6 +32,8 @@ class NavBar extends StatelessWidget {
               print("Clicked on Large Screen");
             } else {
               print("Clicked on Small Screen");
+              // key.currentState?.openDrawer();
+              scaffoldKey?.currentState?.openDrawer();
             }
           },
           child: const Icon(Icons.menu_outlined, size: 30),

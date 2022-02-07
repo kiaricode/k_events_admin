@@ -13,9 +13,13 @@ class SiteLayout extends StatelessWidget {
 
     return Scaffold(
         key: scaffoldKey,
+        drawer: Drawer(
+            child: Column(
+          children: const [Text("Derone")],
+        )),
         body: ResponsiveLayout(
           largeScreen: LargeScreen(scaffoldKey: scaffoldKey),
-          smallScreen: const SmallScreen(),
+          smallScreen: SmallScreen(scaffoldKey: scaffoldKey),
         ));
   }
 }
