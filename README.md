@@ -1,1 +1,1 @@
-"# k_events_admin" 
+# k_events_admin
