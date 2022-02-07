@@ -92,17 +92,20 @@ class NavBar extends StatelessWidget {
         ),
         const CustomText(text: "Dercio Derone", color: AppColors.dark),
         const SizedBox(width: 14),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-          ),
+        InkWell(
+          onTap: () {},
           child: Container(
-            padding: const EdgeInsets.all(2),
-            margin: const EdgeInsets.all(2),
-            child: const CircleAvatar(
-              backgroundColor: AppColors.light,
-              child: Icon(Icons.person_outline, color: AppColors.dark1),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(2),
+              margin: const EdgeInsets.all(2),
+              child: const CircleAvatar(
+                backgroundColor: AppColors.light,
+                child: Icon(Icons.person_outline, color: AppColors.dark1),
+              ),
             ),
           ),
         ),
