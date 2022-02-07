@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Dasboard",
       theme: ThemeData(
-        scaffoldBackgroundColor: light,
+        scaffoldBackgroundColor: AppColors.lightBackground,
         primaryColor: Colors.blue,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.black),

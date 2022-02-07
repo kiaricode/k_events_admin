@@ -9,10 +9,13 @@ class SiteLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
+
+    return Scaffold(
+        key: scaffoldKey,
         body: ResponsiveLayout(
-      largeScreen: LargeScreen(),
-      smallScreen: SmallScreen(),
-    ));
+          largeScreen: LargeScreen(scaffoldKey: scaffoldKey),
+          smallScreen: SmallScreen(),
+        ));
   }
 }
