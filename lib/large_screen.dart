@@ -63,29 +63,50 @@ class NavBar extends StatelessWidget {
           child: Icon(Icons.settings, color: AppColors.dark1.withOpacity(.7)),
           onTap: () {},
         ),
-        const SizedBox(width: 20),
-        Stack(
-          children: [
-            InkWell(
-                child: Icon(Icons.notifications,
-                    color: AppColors.dark1.withOpacity(.7)),
-                onTap: () {}),
-            Positioned(
-              top: 2,
-              right: 2,
-              child: Container(
-                width: 12,
-                height: 12,
-                padding: const EdgeInsets.all(4),
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(color: AppColors.light, width: 2),
+        const SizedBox(width: 10),
+        InkWell(
+          onTap: () {},
+          child: Stack(
+            children: [
+              Icon(Icons.notifications, color: AppColors.dark1.withOpacity(.7)),
+              Positioned(
+                top: 2,
+                right: 2,
+                child: Container(
+                  width: 12,
+                  height: 12,
+                  padding: const EdgeInsets.all(4),
+                  decoration: BoxDecoration(
+                    color: AppColors.activeLight,
+                    borderRadius: BorderRadius.circular(30),
+                    border: Border.all(color: AppColors.light, width: 2),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(left: 14, right: 14),
+          child: Container(width: 1, height: 22, color: AppColors.lightGrey2),
+        ),
+        const CustomText(text: "Dercio Derone", color: AppColors.dark),
+        const SizedBox(width: 14),
+        Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(30),
+          ),
+          child: Container(
+            padding: const EdgeInsets.all(2),
+            margin: const EdgeInsets.all(2),
+            child: const CircleAvatar(
+              backgroundColor: AppColors.light,
+              child: Icon(Icons.person_outline, color: AppColors.dark1),
+            ),
+          ),
+        ),
+        const SizedBox(width: 16),
       ]),
     );
   }
