@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants/color.dart';
 import 'custom_text.dart';
+import 'responsive_layout.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar({
@@ -23,7 +24,13 @@ class NavBar extends StatelessWidget {
       child: Row(children: [
         const SizedBox(width: 20),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            if (!ResponsiveLayout.isSmallScreen(context)) {
+              print("Clicked on Large Screen");
+            } else {
+              print("Clicked on Small Screen");
+            }
+          },
           child: const Icon(Icons.menu_outlined, size: 30),
         ),
         const SizedBox(width: 20),
