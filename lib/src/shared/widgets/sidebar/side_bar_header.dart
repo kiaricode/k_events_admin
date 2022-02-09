@@ -11,25 +11,21 @@ class SideBarHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(isCollapsed);
     return SizedBox(
       height: 60,
       width: double.infinity,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 8, left: 15),
-        child: isCollapsed
-            ? Center(
-                child: Text(
-                  "K",
-                  style: GoogleFonts.asap(
-                    color: AppColors.activeLight,
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
+      child: isCollapsed
+          ? Center(
+              child: Text(
+                "K",
+                style: GoogleFonts.asap(
+                  color: AppColors.activeLight,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
                 ),
-              )
-            : const FullLogoHeader(),
-      ),
+              ),
+            )
+          : const FullLogoHeader(),
     );
   }
 }

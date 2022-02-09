@@ -10,28 +10,31 @@ class FullLogoHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-          text: "k-",
-          style: GoogleFonts.asap(
-            color: AppColors.light,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-          children: const [
-            TextSpan(
-                text: "Eventos",
-                style: TextStyle(color: AppColors.light),
-                children: [
-                  TextSpan(
-                      text: " .",
-                      style: TextStyle(
-                        color: Color(0xFF442BDF),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                      ))
-                ])
-          ]),
+    return Padding(
+      padding: const EdgeInsets.only(top: 8, left: 15),
+      child: Text.rich(
+        TextSpan(
+            text: "k-",
+            style: GoogleFonts.asap(
+              color: AppColors.light,
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+            children: const [
+              TextSpan(
+                  text: "Eventos",
+                  style: TextStyle(color: AppColors.light),
+                  children: [
+                    TextSpan(
+                        text: " .",
+                        style: TextStyle(
+                          color: Color(0xFF442BDF),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 40,
+                        ))
+                  ])
+            ]),
+      ),
     );
   }
 }
