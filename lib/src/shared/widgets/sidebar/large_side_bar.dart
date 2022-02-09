@@ -22,7 +22,7 @@ class LargeSideBar extends StatelessWidget {
             itemCount: 6,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return const MenuItem();
+              return const MenuItem(name: "Derone", iconData: Icons.dashboard);
             },
           )
         ],
