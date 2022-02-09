@@ -17,9 +17,7 @@ class SiteLayout extends StatelessWidget {
 
     return Scaffold(
         key: scaffoldKey,
-        drawer: const Drawer(
-          child: SideBar(),
-        ),
+        drawer: const Drawer(child: SideBar()),
         body: ResponsiveLayout(
           largeScreen: LargeScreen(scaffoldKey: scaffoldKey),
           smallScreen: SmallScreen(scaffoldKey: scaffoldKey),
