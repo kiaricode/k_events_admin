@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../sidebar/large_side_bar.dart';
+import '../sidebar/side_bar.dart';
 import '../nav_bar.dart';
 import 'large_screen_body.dart';
 
@@ -14,7 +14,7 @@ class LargeScreen extends StatelessWidget {
     double _width = MediaQuery.of(context).size.width;
 
     return Row(children: [
-      const LargeSideBar(),
+      const SideBar(),
       Expanded(
           child: Column(
         children: [

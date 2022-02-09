@@ -1,14 +1,11 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:k_events_admin/src/shared/constants/menusModel.dart';
 
 import '../../themes/app_colors.dart';
-import 'build_menus_items.dart';
 import 'get_menus.dart';
 import 'side_bar_header.dart';
 
-class LargeSideBar extends StatelessWidget {
-  const LargeSideBar({
+class SideBar extends StatelessWidget {
+  const SideBar({
     Key? key,
   }) : super(key: key);
 

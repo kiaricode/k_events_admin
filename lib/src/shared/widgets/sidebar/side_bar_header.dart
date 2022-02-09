@@ -14,7 +14,7 @@ class SideBarHeader extends StatelessWidget {
       height: 60,
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.only(top: 20, left: 15),
+        padding: const EdgeInsets.only(top: 8, left: 15),
         child: Text.rich(
           TextSpan(
               text: "k-",

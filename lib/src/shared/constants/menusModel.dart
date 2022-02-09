@@ -14,6 +14,7 @@ class MenusModel {
       MenusModel(name: "Agenda", icon: Icons.calendar_today_outlined),
       MenusModel(name: "Eventos Salvos", icon: Icons.inbox_outlined),
       MenusModel(name: "Serviços", icon: Icons.cloud_circle),
+      MenusModel(name: "Notificações", icon: Icons.cloud_circle),
     ];
   }
 
@@ -21,6 +22,7 @@ class MenusModel {
     return [
       MenusModel(name: "Definições", icon: Icons.settings),
       MenusModel(name: "Coordenadas Bancarias", icon: Icons.account_balance),
+      MenusModel(name: "Sair", icon: Icons.exit_to_app),
     ];
   }
 }
