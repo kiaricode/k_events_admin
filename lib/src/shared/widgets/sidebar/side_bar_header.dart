@@ -13,20 +13,29 @@ class SideBarHeader extends StatelessWidget {
     return SizedBox(
       height: 60,
       width: double.infinity,
-      child: Center(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 20, left: 15),
         child: Text.rich(
           TextSpan(
-              text: "KIARI",
+              text: "k-",
               style: GoogleFonts.asap(
-                color: AppColors.activeLight,
+                color: AppColors.light,
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
               children: const [
                 TextSpan(
-                  text: " EVENTS",
-                  style: TextStyle(color: Colors.white),
-                )
+                    text: "Eventos",
+                    style: TextStyle(color: AppColors.light),
+                    children: [
+                      TextSpan(
+                          text: " .",
+                          style: TextStyle(
+                            color: Color(0xFF442BDF),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 40,
+                          ))
+                    ])
               ]),
         ),
       ),

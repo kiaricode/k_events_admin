@@ -17,7 +17,10 @@ class LargeScreen extends StatelessWidget {
       const LargeSideBar(),
       Expanded(
           child: Column(
-        children: [const NavBar(), LargeScreenBody(width: _width)],
+        children: [
+          const NavBar(),
+          LargeScreenBody(width: _width),
+        ],
       )),
     ]);
   }

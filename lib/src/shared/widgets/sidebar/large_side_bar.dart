@@ -22,7 +22,7 @@ class LargeSideBar extends StatelessWidget {
         children: [
           const SideBarHeader(),
           Container(
-            margin: const EdgeInsets.only(top: 60),
+            margin: const EdgeInsets.only(top: 50),
             child: const GetMenus(),
           ),
         ],
