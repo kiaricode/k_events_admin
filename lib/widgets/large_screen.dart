@@ -14,15 +14,14 @@ class LargeScreen extends StatelessWidget {
     return Row(children: [
       const LargeSideBar(),
       Expanded(
-          flex: 5,
           child: Column(
-            children: [
-              const NavBar(),
-              Expanded(
-                child: Container(color: Colors.transparent),
-              )
-            ],
-          )),
+        children: [
+          const NavBar(),
+          Expanded(
+            child: Container(color: Colors.transparent),
+          )
+        ],
+      )),
     ]);
   }
 }
