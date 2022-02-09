@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:k_events_admin/constants/color.dart';
 import 'package:k_events_admin/widgets/nav_bar.dart';
 
+import 'large_side_bar.dart';
+
 class LargeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;
 
@@ -10,7 +12,7 @@ class LargeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Expanded(child: Container(color: AppColors.dark)),
+      const LargeSideBar(),
       Expanded(
           flex: 5,
           child: Column(
