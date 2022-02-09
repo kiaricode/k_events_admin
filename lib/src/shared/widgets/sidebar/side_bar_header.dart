@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../themes/app_colors.dart';
+import 'full_side_bar_header.dart';
 
 class SideBarHeader extends StatelessWidget {
   const SideBarHeader({
@@ -10,11 +11,11 @@ class SideBarHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 60,
       width: double.infinity,
       child: Padding(
-        padding: const EdgeInsets.only(top: 8, left: 15),
+        padding: EdgeInsets.only(top: 8, left: 15),
         child: FullHeader(),
       
       ),
@@ -22,35 +23,3 @@ class SideBarHeader extends StatelessWidget {
   }
 }
 
-class FullHeader extends StatelessWidget {
-  const FullHeader({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-          text: "k-",
-          style: GoogleFonts.asap(
-            color: AppColors.light,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
-          children: const [
-            TextSpan(
-                text: "Eventos",
-                style: TextStyle(color: AppColors.light),
-                children: [
-                  TextSpan(
-                      text: " .",
-                      style: TextStyle(
-                        color: Color(0xFF442BDF),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 40,
-                      ))
-                ])
-          ]),
-    );
-  }
-}
