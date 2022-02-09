@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:k_events_admin/constants/color.dart';
-import 'package:k_events_admin/widgets/nav_bar.dart';
 
 import 'large_side_bar.dart';
+import 'nav_bar.dart';
 
 class LargeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;

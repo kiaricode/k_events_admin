@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/color.dart';
+import '../../constants/color.dart';
 import 'custom_text.dart';
 import 'responsive_layout.dart';
 
