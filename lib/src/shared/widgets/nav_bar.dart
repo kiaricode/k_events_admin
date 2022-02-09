@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:k_events_admin/src/controllers/menu_controller.dart';
-import 'package:k_events_admin/src/shared/dependencyinjections/controllers.dart';
 import 'package:provider/provider.dart';
 
 import '../themes/app_colors.dart';
@@ -17,6 +16,7 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var state = context.read<MenuController>();
     return Container(
       height: 60,
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
@@ -32,8 +32,9 @@ class NavBar extends StatelessWidget {
         InkWell(
           onTap: () {
             if (!ResponsiveLayout.isSmallScreen(context)) {
-              context.read<MenuController>().changeCollapse();
+              state.changeCollapse();
             } else {
+              if (!state.isOpen) state.changeCollapse();
               scaffoldKey?.currentState?.openDrawer();
             }
           },

@@ -20,7 +20,7 @@ class LargeScreenDashboard extends StatelessWidget {
       child: Center(
           child: CustomText(
               text:
-                  "Large Screen with width: $_width and collapsed is ${state.isCollapsed}")),
+                  "Large Screen with width: $_width and collapsed is ${state.isOpen}")),
     );
   }
 }

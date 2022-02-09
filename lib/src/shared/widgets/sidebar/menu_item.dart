@@ -21,9 +21,9 @@ class MenuItem extends StatelessWidget {
 
     return ListTile(
       leading: Icon(iconData, color: AppColors.lightBackground),
-      title: state.isCollapsed
-          ? null
-          : CustomText(text: name, color: AppColors.lightBackground),
+      title: state.isOpen
+          ? CustomText(text: name, color: AppColors.lightBackground)
+          : null,
     );
   }
 }

@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../responsive_layout.dart';
 import 'full_logo_header.dart';
 import 'short_logo_header.dart';
 
 class SideBarHeader extends StatelessWidget {
-  final bool isCollapsed;
+  final bool isOpen;
 
-  const SideBarHeader({Key? key, required this.isCollapsed}) : super(key: key);
+  const SideBarHeader({Key? key, required this.isOpen}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 60,
       width: double.infinity,
-      child: isCollapsed ? const ShortLogoHeader() : const FullLogoHeader(),
+      child: isOpen ? const FullLogoHeader() : const ShortLogoHeader(),
     );
   }
 }
