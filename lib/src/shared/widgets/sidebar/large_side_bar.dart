@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:k_events_admin/src/shared/constants/menusModel.dart';
 
 import '../../themes/app_colors.dart';
 import 'menu_item.dart';
@@ -12,7 +13,7 @@ class LargeSideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 260,
+      width: 240,
       color: AppColors.dark,
       child: Column(
         children: [
@@ -22,9 +23,16 @@ class LargeSideBar extends StatelessWidget {
             itemCount: 6,
             shrinkWrap: true,
             itemBuilder: (context, index) {
-              return const MenuItem(name: "Derone", iconData: Icons.dashboard);
+              var menus = MenusModel.topMenus();
+              return MenuItem(
+                name: menus[index].name,
+                iconData: menus[index].icon,
+              );
             },
-          )
+          ),
+          const SizedBox(height: 10),
+          const Divider(color: AppColors.lightBackground, thickness: .2),
+          const SizedBox(height: 10),
         ],
       ),
     );

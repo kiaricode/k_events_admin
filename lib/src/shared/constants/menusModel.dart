@@ -10,11 +10,11 @@ class MenusModel {
   static List<MenusModel> topMenus() {
     return [
       MenusModel(name: "Dasboard", icon: Icons.dashboard),
-      MenusModel(name: "Eventos", icon: Icons.list),
-      MenusModel(name: "Convites", icon: Icons.inbox_outlined),
-      MenusModel(name: "Agenda", icon: Icons.calendar_month_rounded),
-      MenusModel(name: "Eventos Salvos", icon: Icons.gif_box_outlined),
-      MenusModel(name: "Serviços", icon: Icons.cloud_circle_outlined),
+      MenusModel(name: "Eventos", icon: Icons.list_alt_rounded),
+      MenusModel(name: "Convites", icon: Icons.book_online),
+      MenusModel(name: "Agenda", icon: Icons.calendar_today_outlined),
+      MenusModel(name: "Eventos Salvos", icon: Icons.inbox_outlined),
+      MenusModel(name: "Serviços", icon: Icons.cloud_circle),
     ];
   }
 }

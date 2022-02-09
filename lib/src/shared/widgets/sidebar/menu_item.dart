@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:k_events_admin/src/shared/themes/app_colors.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 
 class MenuItem extends StatelessWidget {
@@ -13,14 +14,9 @@ class MenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 2),
-      width: double.infinity,
-      height: 40,
-      child: ListTile(
-        leading: Icon(iconData),
-        title: CustomText(text: name),
-      ),
+    return ListTile(
+      leading: Icon(iconData, color: AppColors.lightBackground),
+      title: CustomText(text: name, color: AppColors.lightBackground),
     );
   }
 }
