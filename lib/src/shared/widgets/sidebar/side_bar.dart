@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:k_events_admin/src/controllers/menu_controller.dart';
 import 'package:k_events_admin/src/shared/dependencyinjections/controllers.dart';
+import 'package:k_events_admin/src/shared/widgets/responsive_layout.dart';
+import 'package:provider/provider.dart';
 
 import '../../themes/app_colors.dart';
 import 'get_menus.dart';
@@ -13,20 +15,19 @@ class SideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => Container(
-        width: menuController.isCollapsed.value ? 70 : 280,
-        height: double.infinity,
-        color: AppColors.dark,
-        child: Stack(
-          children: [
-            SideBarHeader(isCollapsed: menuController.isCollapsed.value),
-            Container(
-              margin: const EdgeInsets.only(top: 50),
-              child: const GetMenus(),
-            ),
-          ],
-        ),
+    final state = context.watch<MenuController>();
+    return Container(
+      width: state.isCollapsed ? 60 : 280,
+      height: double.infinity,
+      color: AppColors.dark,
+      child: Stack(
+        children: [
+          SideBarHeader(isCollapsed: state.isCollapsed),
+          Container(
+            margin: const EdgeInsets.only(top: 50),
+            child: const GetMenus(),
+          ),
+        ],
       ),
     );
   }

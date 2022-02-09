@@ -1,10 +1,11 @@
-import 'package:get/get.dart';
+import 'package:flutter/material.dart';
 
-class MenuController extends GetxController {
-  static MenuController instance = Get.find();
-  var isCollapsed = false.obs;
+class MenuController extends ChangeNotifier {
+  static MenuController instance = MenuController();
+  var isCollapsed = false;
 
-  changeCollapse() {
-    isCollapsed.value = !isCollapsed.value;
+  void changeCollapse() {
+    isCollapsed = !isCollapsed;
+    notifyListeners();
   }
 }
