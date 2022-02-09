@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'constants/color.dart';
+import 'shared/themes/app_colors.dart';
 import 'site_layout.dart';
 
 class AppWidget extends StatelessWidget {
