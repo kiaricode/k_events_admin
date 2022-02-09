@@ -2,9 +2,9 @@ import 'package:get/get.dart';
 
 class MenuController extends GetxController {
   static MenuController instance = Get.find();
-  var isCollapse = false.obs;
+  var isCollapsed = false.obs;
 
   changeCollapse() {
-    isCollapse.value = !isCollapse.value;
+    isCollapsed.value = !isCollapsed.value;
   }
 }

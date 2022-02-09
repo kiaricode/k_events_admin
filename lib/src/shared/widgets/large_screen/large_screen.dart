@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../custom_text.dart';
 import '../sidebar/side_bar.dart';
 import '../nav_bar.dart';
 import 'large_screen_dashboard.dart';

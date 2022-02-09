@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../themes/app_colors.dart';
 
-class FullHeader extends StatelessWidget {
-  const FullHeader({
+class FullLogoHeader extends StatelessWidget {
+  const FullLogoHeader({
     Key? key,
   }) : super(key: key);
 

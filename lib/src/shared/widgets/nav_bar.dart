@@ -32,7 +32,7 @@ class NavBar extends StatelessWidget {
             if (!ResponsiveLayout.isSmallScreen(context)) {
               menuController.changeCollapse();
               print(
-                  "Clicked on Large Screen, is collapse ${menuController.isCollapse.value}");
+                  "Clicked on Large Screen, is collapse ${menuController.isCollapsed.value}");
             } else {
               print("Clicked on Small Screen");
               // key.currentState?.openDrawer();

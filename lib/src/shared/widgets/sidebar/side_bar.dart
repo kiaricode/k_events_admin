@@ -15,12 +15,12 @@ class SideBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(
       () => Container(
-        width: menuController.isCollapse.value ? 70 : 280,
+        width: menuController.isCollapsed.value ? 70 : 280,
         height: double.infinity,
         color: AppColors.dark,
         child: Stack(
           children: [
-            const SideBarHeader(),
+            SideBarHeader(isCollapsed: menuController.isCollapsed.value),
             Container(
               margin: const EdgeInsets.only(top: 50),
               child: const GetMenus(),
