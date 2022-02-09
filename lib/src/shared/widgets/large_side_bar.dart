@@ -24,9 +24,10 @@ class LargeSideBar extends StatelessWidget {
                 TextSpan(
                     text: "KIARI",
                     style: GoogleFonts.asap(
-                        color: AppColors.activeLight,
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold),
+                      color: AppColors.activeLight,
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                     children: const [
                       TextSpan(
                           text: " EVENTS",
