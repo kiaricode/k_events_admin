@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'large_side_bar.dart';
+import 'sidebar/large_side_bar.dart';
 import 'nav_bar.dart';
 
 class LargeScreen extends StatelessWidget {
