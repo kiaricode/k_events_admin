@@ -22,19 +22,7 @@ class LargeSideBar extends StatelessWidget {
           const SideBarHeader(),
           Container(
             margin: const EdgeInsets.only(top: 60),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  const SizedBox(height: 40),
-                  BuildMenuItems(menus: MenusModel.topMenus()),
-                  const SizedBox(height: 10),
-                  const Divider(
-                      color: AppColors.lightBackground, thickness: .2),
-                  const SizedBox(height: 10),
-                  BuildMenuItems(menus: MenusModel.bottomMenus()),
-                ],
-              ),
-            ),
+            child: const GetMenus(),
           ),
         ],
       ),
