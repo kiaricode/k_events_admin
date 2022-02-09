@@ -15,30 +15,42 @@ class SideBarHeader extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: const EdgeInsets.only(top: 8, left: 15),
-        child: Text.rich(
-          TextSpan(
-              text: "k-",
-              style: GoogleFonts.asap(
-                color: AppColors.light,
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
-              children: const [
-                TextSpan(
-                    text: "Eventos",
-                    style: TextStyle(color: AppColors.light),
-                    children: [
-                      TextSpan(
-                          text: " .",
-                          style: TextStyle(
-                            color: Color(0xFF442BDF),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 40,
-                          ))
-                    ])
-              ]),
-        ),
+        child: FullHeader(),
+      
       ),
+    );
+  }
+}
+
+class FullHeader extends StatelessWidget {
+  const FullHeader({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text.rich(
+      TextSpan(
+          text: "k-",
+          style: GoogleFonts.asap(
+            color: AppColors.light,
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+          children: const [
+            TextSpan(
+                text: "Eventos",
+                style: TextStyle(color: AppColors.light),
+                children: [
+                  TextSpan(
+                      text: " .",
+                      style: TextStyle(
+                        color: Color(0xFF442BDF),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40,
+                      ))
+                ])
+          ]),
     );
   }
 }
