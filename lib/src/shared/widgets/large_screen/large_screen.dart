@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../custom_text.dart';
 import '../sidebar/large_side_bar.dart';
 import '../nav_bar.dart';
+import 'large_screen_body.dart';
 
 class LargeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;
