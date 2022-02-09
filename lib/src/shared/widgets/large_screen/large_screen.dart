@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../custom_text.dart';
 import '../sidebar/side_bar.dart';
 import '../nav_bar.dart';
-import 'large_screen_body.dart';
+import 'large_screen_dashboard.dart';
 
 class LargeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;
@@ -16,12 +17,13 @@ class LargeScreen extends StatelessWidget {
     return Row(children: [
       const SideBar(),
       Expanded(
-          child: Column(
-        children: [
-          const NavBar(),
-          LargeScreenBody(width: _width),
-        ],
-      )),
+        child: Column(
+          children: [
+            const NavBar(),
+            LargeScreenDashboard(width: _width),
+          ],
+        ),
+      ),
     ]);
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../custom_text.dart';
 
-class LargeScreenBody extends StatelessWidget {
-  const LargeScreenBody({
+class LargeScreenDashboard extends StatelessWidget {
+  const LargeScreenDashboard({
     Key? key,
     required double width,
   })  : _width = width,
@@ -14,10 +14,8 @@ class LargeScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        color: Colors.transparent,
-        child:
-            Center(child: CustomText(text: "Large Screen with width: $_width")),
+      child: Center(
+        child: CustomText(text: "Large Screen with width: $_width"),
       ),
     );
   }
