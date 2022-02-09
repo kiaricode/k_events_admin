@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
         }),
       ),
       home: const SiteLayout(),
+      // initialRoute: AppRoutes.splash,
+      // routes: AppRoutes.routes(context),
     );
   }
 }
