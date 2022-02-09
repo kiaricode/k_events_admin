@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'constants/color.dart';
 import 'site_layout.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class AppWidget extends StatelessWidget {
+  const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
