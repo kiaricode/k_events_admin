@@ -16,23 +16,14 @@ class LargeSideBar extends StatelessWidget {
       width: 240,
       color: AppColors.dark,
       child: Column(
-        children: [
-          const SideBarHeader(),
-          const SizedBox(height: 40),
-          ListView.builder(
-            itemCount: 6,
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              var menus = MenusModel.topMenus();
-              return MenuItem(
-                name: menus[index].name,
-                iconData: menus[index].icon,
-              );
-            },
-          ),
-          const SizedBox(height: 10),
-          const Divider(color: AppColors.lightBackground, thickness: .2),
-          const SizedBox(height: 10),
+        children: const [
+          SideBarHeader(),
+          SizedBox(height: 40),
+          BuildMenuItems(),
+          SizedBox(height: 10),
+          Divider(color: AppColors.lightBackground, thickness: .2),
+          SizedBox(height: 10),
+          BuildMenuItems(),
         ],
       ),
     );
