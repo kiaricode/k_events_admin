@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:k_events_admin/src/shared/dependencyinjections/controllers.dart';
 
 import '../themes/app_colors.dart';
 import 'custom_text.dart';
@@ -29,7 +30,9 @@ class NavBar extends StatelessWidget {
         InkWell(
           onTap: () {
             if (!ResponsiveLayout.isSmallScreen(context)) {
-              print("Clicked on Large Screen");
+              menuController.changeCollapse();
+              print(
+                  "Clicked on Large Screen, is collapse ${menuController.isCollapse.value}");
             } else {
               print("Clicked on Small Screen");
               // key.currentState?.openDrawer();
