@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'custom_text.dart';
 import 'sidebar/large_side_bar.dart';
 import 'nav_bar.dart';
 
@@ -10,6 +11,8 @@ class LargeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double _width = MediaQuery.of(context).size.width;
+
     return Row(children: [
       const LargeSideBar(),
       Expanded(
@@ -17,7 +20,11 @@ class LargeScreen extends StatelessWidget {
         children: [
           const NavBar(),
           Expanded(
-            child: Container(color: Colors.transparent),
+            child: Container(
+              color: Colors.transparent,
+              child: Center(
+                  child: CustomText(text: "Large Screen with width: $_width")),
+            ),
           )
         ],
       )),
