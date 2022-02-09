@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../themes/app_colors.dart';
+import 'menu_item.dart';
 import 'side_bar_header.dart';
 
 class LargeSideBar extends StatelessWidget {
@@ -14,8 +15,16 @@ class LargeSideBar extends StatelessWidget {
       width: 260,
       color: AppColors.dark,
       child: Column(
-        children: const [
-          SideBarHeader(),
+        children: [
+          const SideBarHeader(),
+          const SizedBox(height: 40),
+          ListView.builder(
+            itemCount: 6,
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return const MenuItem();
+            },
+          )
         ],
       ),
     );
