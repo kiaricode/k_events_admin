@@ -9,10 +9,12 @@ class MenuController extends ChangeNotifier {
 
   changeActiveItemTo(String itemName) {
     activeItem = itemName;
+    notifyListeners();
   }
 
   onHover(String itemName) {
     if (!isActive(itemName)) hoverItem = itemName;
+    notifyListeners();
   }
 
   bool isActive(String itemName) => activeItem == itemName;

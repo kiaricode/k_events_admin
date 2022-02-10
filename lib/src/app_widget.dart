@@ -14,7 +14,9 @@ class AppWidget extends StatelessWidget {
       title: "Dasboard",
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.lightBackground,
-        primaryColor: Colors.blue,
+        primaryColor: AppColors.activeLight,
+        //  primaryColor: AppColors.primary,
+        primarySwatch: AppColors.mPrimaryColor,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.black),
         pageTransitionsTheme: const PageTransitionsTheme(builders: {

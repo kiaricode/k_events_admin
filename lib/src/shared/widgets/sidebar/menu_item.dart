@@ -18,12 +18,52 @@ class MenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final state = context.watch<MenuController>();
+    var DisplayText = state.isOpen
+        ? CustomText(text: name, color: AppColors.lightBackground)
+        : null;
 
-    return ListTile(
-      leading: Icon(iconData, color: AppColors.lightBackground),
-      title: state.isOpen
-          ? CustomText(text: name, color: AppColors.lightBackground)
-          : null,
+    return Container(
+      color: Colors.transparent,
+      margin: const EdgeInsets.only(right: 10, left: 10, bottom: 10),
+      child: Center(
+        child: TextButton(
+          onPressed: () {
+            state.changeActiveItemTo(name);
+          },
+          style: TextButton.styleFrom(
+            backgroundColor:
+                state.isActive(name) ? AppColors.activeLight : null,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          child: SizedBox(
+            height: 45,
+            child: Row(
+              children: [
+                Icon(iconData, color: AppColors.lightBackground),
+                Visibility(
+                  visible: state.isOpen,
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: CustomText(
+                        text: name, color: AppColors.lightBackground),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
+
+
+// ListTile(
+//             contentPadding: EdgeInsets.zero,
+//             leading: Icon(iconData, color: AppColors.lightBackground),
+//             title: state.isOpen
+//                 ? CustomText(text: name, color: AppColors.lightBackground)
+//                 : null,
+//           )

@@ -28,7 +28,7 @@ class FullLogoHeader extends StatelessWidget {
                     TextSpan(
                         text: " .",
                         style: TextStyle(
-                          color: Color(0xFF442BDF),
+                          color: AppColors.activeLight,
                           fontWeight: FontWeight.bold,
                           fontSize: 40,
                         ))
