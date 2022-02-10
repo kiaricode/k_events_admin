@@ -41,8 +41,8 @@ class NavBar extends StatelessWidget {
           child: const Icon(Icons.menu_outlined, size: 30),
         ),
         const SizedBox(width: 20),
-        const CustomText(
-          text: "Dashboard",
+        CustomText(
+          text: context.watch<MenuController>().activeItem,
           color: AppColors.dark,
           size: 20,
           fontWeight: FontWeight.bold,
