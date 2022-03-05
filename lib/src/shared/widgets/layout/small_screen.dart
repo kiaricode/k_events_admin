@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'custom_text.dart';
-import 'nav_bar.dart';
+import '../custom_text.dart';
+import '../nav_bar.dart';
 
 class SmallScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;

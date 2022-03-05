@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'shared/widgets/large_screen.dart';
+import 'shared/widgets/layout/large_screen.dart';
+import 'shared/widgets/layout/small_screen.dart';
 import 'shared/widgets/responsive_layout.dart';
 import 'shared/widgets/sidebar/side_bar.dart';
-import 'shared/widgets/small_screen.dart';
 
 class SiteLayout extends StatelessWidget {
   const SiteLayout({Key? key}) : super(key: key);
