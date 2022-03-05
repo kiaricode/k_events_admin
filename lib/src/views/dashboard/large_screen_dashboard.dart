@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:k_events_admin/src/controllers/menu_controller.dart';
 import 'package:provider/provider.dart';
 
-import '../../themes/app_colors.dart';
-import '../custom_text.dart';
-import '../sidebar/menu_item.dart';
+import '../../shared/widgets/custom_text.dart';
 
 class LargeScreenDashboard extends StatelessWidget {
   const LargeScreenDashboard({

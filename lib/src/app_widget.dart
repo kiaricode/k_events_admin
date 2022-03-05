@@ -11,7 +11,7 @@ class AppWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: "Dasboard",
+      title: "Dashboard",
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.lightBackground,
         primaryColor: AppColors.activeLight,
