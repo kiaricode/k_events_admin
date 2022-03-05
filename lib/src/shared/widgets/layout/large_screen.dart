@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../../../views/dashboard/large_screen_dashboard.dart';
+import '../../../views/events/events_page.dart';
 import '../nav_bar.dart';
 import '../sidebar/side_bar.dart';
-
 
 class LargeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;
@@ -20,7 +20,8 @@ class LargeScreen extends StatelessWidget {
         child: Column(
           children: [
             const NavBar(),
-            LargeScreenDashboard(width: _width),
+            // LargeScreenDashboard(width: _width),
+            EventsPage(width: _width),
           ],
         ),
       ),

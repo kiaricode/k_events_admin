@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../views/events/events_page.dart';
 import '../custom_text.dart';
 import '../nav_bar.dart';
 
@@ -14,13 +15,14 @@ class SmallScreen extends StatelessWidget {
     return Column(
       children: [
         NavBar(scaffoldKey: scaffoldKey),
-        Expanded(
-          child: Container(
-            color: Colors.transparent,
-            child: Center(
-                child: CustomText(text: "Small Screen with width: $_width")),
-          ),
-        )
+        EventsPage(width: _width),
+        // Expanded(
+        //   child: Container(
+        //     color: Colors.transparent,
+        //     child: Center(
+        //         child: CustomText(text: "Small Screen with width: $_width")),
+        //   ),
+        // )
       ],
     );
   }
