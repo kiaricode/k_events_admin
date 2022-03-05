@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../sidebar/side_bar.dart';
-import '../nav_bar.dart';
-import '../../../views/dashboard/large_screen_dashboard.dart';
+import 'sidebar/side_bar.dart';
+import 'nav_bar.dart';
+import '../../views/dashboard/large_screen_dashboard.dart';
 
 class LargeScreen extends StatelessWidget {
   final GlobalKey<ScaffoldState>? scaffoldKey;
