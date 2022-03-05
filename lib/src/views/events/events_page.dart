@@ -18,10 +18,10 @@ class EventsPage extends StatelessWidget {
     var state = context.watch<MenuController>();
     return Column(
       children: [
-        const SizedBox(height: 20),
-        CustomText(
-            text:
-                "Large Screen at Events Page with width: $_width and collapsed is ${state.isOpen}"),
+        const SizedBox(height: 47),
+        Row(children: [
+          TextField()
+        ],)
       ],
     );
   }
