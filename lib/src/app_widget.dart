@@ -15,7 +15,6 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.lightBackground,
         primaryColor: AppColors.activeLight,
-        //  primaryColor: AppColors.primary,
         primarySwatch: AppColors.mPrimaryColor,
         textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
             .apply(bodyColor: Colors.black),
@@ -25,7 +24,7 @@ class AppWidget extends StatelessWidget {
           TargetPlatform.windows: FadeUpwardsPageTransitionsBuilder(),
         }),
       ),
-      home: const SiteLayout(),
+      home: const SafeArea(child: SiteLayout()),
       // initialRoute: AppRoutes.splash,
       // routes: AppRoutes.routes(context),
     );

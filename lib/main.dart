@@ -12,7 +12,6 @@ void main() {
   return runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider<MenuController>(create: (_) => MenuController()),
-      // ListenableProvider<Balance>(create: (_) => Balance()),
     ],
     child: const AppWidget(),
   ));
