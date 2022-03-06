@@ -24,26 +24,16 @@ class InvitesPage extends StatelessWidget {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Row(
-              children: [
-                const AppTextField(
+              children: const [
+                AppTextField(
                   label: "Pesquisar",
                   hintText: "Pesquisar...",
                   prefixIcon: Icons.search,
                 ),
-                const SizedBox(width: 10),
-                const AppTextButton(
+                SizedBox(width: 10),
+                AppTextButton(
                   text: "Filtrar",
                   iconData: Icons.filter_alt,
-                ),
-                const Expanded(child: SizedBox()),
-                SizedBox(
-                  height: 40,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: const CustomText(
-                        text: "Adicionar Evento",
-                        color: Colors.white,
-                      )),
                 ),
               ],
             ),
@@ -52,7 +42,7 @@ class InvitesPage extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(left: 8),
               child: const CustomText(
-                text: "Lista de Eventos",
+                text: "Meus Convites",
                 size: 18,
                 fontWeight: FontWeight.w600,
               ),

@@ -14,7 +14,7 @@ class EventCard extends StatelessWidget {
         "https://media.istockphoto.com/photos/abstract-background-wallpaper-picture-id952039286?s=612x612";
 
     return Container(
-      width: 360,
+      width: 400,
       height: 140,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -39,7 +39,7 @@ class EventCard extends StatelessWidget {
             SizedBox(height: 10),
             SizedBox(
               child: CustomText(
-                text: "Game Over Dero..",
+                text: "O Reencontro",
                 fontWeight: FontWeight.bold,
                 size: 17,
               ),
