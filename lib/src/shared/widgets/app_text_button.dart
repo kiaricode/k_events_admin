@@ -16,7 +16,10 @@ class AppTextButton extends StatelessWidget {
           children: [
             const Icon(Icons.filter_alt, color: AppColors.lightGrey1),
             const SizedBox(width: 10),
-            CustomText(text: text)
+            CustomText(
+              text: text,
+              color: AppColors.gray,
+            )
           ],
         ));
   }

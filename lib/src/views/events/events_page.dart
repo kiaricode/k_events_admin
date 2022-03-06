@@ -10,7 +10,7 @@ class EventsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     return Container(
       margin: const EdgeInsets.only(
         top: 48,
@@ -18,7 +18,7 @@ class EventsPage extends StatelessWidget {
         right: 20,
       ),
       width: double.infinity,
-      child: Column(children: [
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Row(
           children: [
             const AppTextField(
@@ -37,9 +37,16 @@ class EventsPage extends StatelessWidget {
                     text: "Adicionar Evento",
                     color: Colors.white,
                   )),
-            )
+            ),
           ],
-        )
+        ),
+        const SizedBox(height: 28),
+        const CustomText(
+          text: "Eventos Publicos (3)",
+          size: 18,
+          fontWeight: FontWeight.w600,
+        ),
+        const SizedBox(height: 20),
       ]),
     );
   }
