@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 
 import '../themes/app_colors.dart';
 
@@ -7,6 +9,9 @@ class EventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var imageSrc =
+        "https://media.istockphoto.com/photos/abstract-background-wallpaper-picture-id952039286?s=612x612";
+
     return Container(
       width: 344,
       height: 136,
@@ -19,9 +24,44 @@ class EventCard extends StatelessWidget {
         Container(
           width: 136,
           decoration: BoxDecoration(
-            color: Colors.grey,
-            borderRadius: BorderRadius.circular(20),
-          ),
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                fit: BoxFit.fill,
+                image: NetworkImage(imageSrc),
+              )),
+        ),
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const SizedBox(
+                  width: 160,
+                  child: CustomText(
+                    text: "Game Over",
+                    fontWeight: FontWeight.bold,
+                    size: 17,
+                  ),
+                ),
+                InkWell(onTap: () {}, child: Icon(Icons.more_horiz, size: 30)),
+              ],
+            ),
+            const SizedBox(height: 4),
+            Row(
+              children: const [
+                Icon(Icons.price_change, color: AppColors.dark1),
+                SizedBox(width: 10),
+                CustomText(
+                  text: "2.000,00 kz",
+                  color: AppColors.dark1,
+                )
+              ],
+            ),
+          ],
         )
       ]),
     );
