@@ -15,8 +15,12 @@ class EventsPage extends StatelessWidget {
       child: SingleChildScrollView(
         controller: ScrollController(keepScrollOffset: true),
         child: Padding(
-          padding:
-              const EdgeInsets.only(top: 48, right: 20, left: 20, bottom: 20),
+          padding: const EdgeInsets.only(
+            top: 48,
+            right: 20,
+            left: 20,
+            bottom: 30,
+          ),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Row(
@@ -26,8 +30,11 @@ class EventsPage extends StatelessWidget {
                   hintText: "Pesquisar...",
                   prefixIcon: Icons.search,
                 ),
-                const SizedBox(width: 18),
-                const AppTextButton(text: "Filtrar"),
+                const SizedBox(width: 10),
+                const AppTextButton(
+                  text: "Filtrar",
+                  iconData: Icons.filter_alt,
+                ),
                 const Expanded(child: SizedBox()),
                 SizedBox(
                   height: 40,
@@ -40,7 +47,7 @@ class EventsPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 28),
+            const SizedBox(height: 38),
             Container(
               margin: const EdgeInsets.only(left: 8),
               child: const CustomText(
@@ -57,10 +64,6 @@ class EventsPage extends StatelessWidget {
                 runSpacing: 18,
                 alignment: WrapAlignment.spaceBetween,
                 children: const [
-                  EventCard(),
-                  EventCard(),
-                  EventCard(),
-                  EventCard(),
                   EventCard(),
                   EventCard(),
                   EventCard(),
