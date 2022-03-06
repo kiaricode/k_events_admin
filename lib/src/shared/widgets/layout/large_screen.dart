@@ -18,7 +18,7 @@ class LargeScreen extends StatelessWidget {
       Expanded(
         child: Column(
           children: const [
-             NavBar(),
+            NavBar(),
             // LargeScreenDashboard(width: _width),
             EventsPage(),
           ],

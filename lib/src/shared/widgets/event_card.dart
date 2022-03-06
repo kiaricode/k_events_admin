@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 import 'package:k_events_admin/src/shared/widgets/event_category_label.dart';
 
@@ -15,7 +14,7 @@ class EventCard extends StatelessWidget {
         "https://media.istockphoto.com/photos/abstract-background-wallpaper-picture-id952039286?s=612x612";
 
     return Container(
-      width: 344,
+      width: 380,
       height: 140,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -42,7 +41,7 @@ class EventCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 const SizedBox(
-                  width: 160,
+                  width: 190,
                   child: CustomText(
                     text: "Game Over Dero...",
                     fontWeight: FontWeight.bold,
