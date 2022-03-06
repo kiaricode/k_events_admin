@@ -10,7 +10,7 @@ class EventsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     return Expanded(
       child: SingleChildScrollView(
         controller: ScrollController(keepScrollOffset: true),
@@ -48,6 +48,7 @@ class EventsPage extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 38),
+            Text(size.width.toString()),
             Container(
               margin: const EdgeInsets.only(left: 8),
               child: const CustomText(
@@ -62,7 +63,7 @@ class EventsPage extends StatelessWidget {
               child: Wrap(
                 spacing: 10,
                 runSpacing: 18,
-                alignment: WrapAlignment.spaceBetween,
+                alignment: WrapAlignment.start,
                 children: const [
                   EventCard(),
                   EventCard(),
