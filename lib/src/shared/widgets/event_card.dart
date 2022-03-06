@@ -59,6 +59,8 @@ class EventCard extends StatelessWidget {
               text: "10 de Oct, 20:00",
               iconData: Icons.date_range,
             ),
+            const SizedBox(height: 18),
+            
           ],
         )
       ]),
