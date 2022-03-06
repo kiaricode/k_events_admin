@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 
 import '../themes/app_colors.dart';
+import 'app_title.dart';
 
 class EventCard extends StatelessWidget {
   const EventCard({Key? key}) : super(key: key);
@@ -51,15 +52,10 @@ class EventCard extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 4),
-            Row(
-              children: const [
-                Icon(Icons.price_change, color: AppColors.dark1),
-                SizedBox(width: 10),
-                CustomText(
-                  text: "2.000,00 kz",
-                  color: AppColors.dark1,
-                )
-              ],
+            const AppTitle(text: "2.000,00 kz", iconData: Icons.price_change),
+            const AppTitle(
+              text: "10 de Oct, 20:00",
+              iconData: Icons.date_range,
             ),
           ],
         )
