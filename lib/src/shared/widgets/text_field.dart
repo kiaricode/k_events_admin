@@ -11,6 +11,8 @@ class AppTextField extends StatelessWidget {
   final Widget? sufixIcon;
   final TextInputType? textInputType;
   final String? initialValue;
+  final double? width;
+  final double? height;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
   final void Function(String value)? onChanged;
@@ -29,16 +31,15 @@ class AppTextField extends StatelessWidget {
     this.controller,
     this.onChanged,
     this.onEditingComplete,
+    this.width,
+    this.height,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(
-        bottom: 12,
-        right: 18,
-        left: 18,
-      ),
+    return SizedBox(
+      width: width ?? 240,
+      height: height ?? 40,
       child: TextFormField(
         initialValue: initialValue,
         validator: validator,
@@ -49,14 +50,14 @@ class AppTextField extends StatelessWidget {
         decoration: InputDecoration(
           fillColor: Colors.white,
           filled: true,
-          // contentPadding: const EdgeInsets.symmetric(vertical: 4.0),
           contentPadding: const EdgeInsets.only(left: 14),
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide.none,
-            borderRadius: BorderRadius.circular(22),
+            borderRadius: BorderRadius.circular(6),
+            borderSide: const BorderSide(color: Colors.grey),
           ),
+
           // errorStyle: ,
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(22)),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
           hintText: hintText,
           label: Text(label),
           prefixIcon: Icon(prefixIcon),

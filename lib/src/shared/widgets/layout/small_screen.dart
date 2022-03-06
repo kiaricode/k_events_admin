@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../views/events/events_page.dart';
-import '../custom_text.dart';
 import '../nav_bar.dart';
 
 class SmallScreen extends StatelessWidget {
@@ -11,11 +10,11 @@ class SmallScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
+    // double _width = MediaQuery.of(context).size.width;
     return Column(
       children: [
         NavBar(scaffoldKey: scaffoldKey),
-        EventsPage(width: _width),
+        const EventsPage(),
         // Expanded(
         //   child: Container(
         //     color: Colors.transparent,

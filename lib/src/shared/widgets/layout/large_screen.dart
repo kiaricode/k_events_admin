@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../views/dashboard/large_screen_dashboard.dart';
 import '../../../views/events/events_page.dart';
 import '../nav_bar.dart';
 import '../sidebar/side_bar.dart';
@@ -12,16 +11,16 @@ class LargeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double _width = MediaQuery.of(context).size.width;
+    // double _width = MediaQuery.of(context).size.width;
 
     return Row(children: [
       const SideBar(),
       Expanded(
         child: Column(
-          children: [
-            const NavBar(),
+          children: const [
+             NavBar(),
             // LargeScreenDashboard(width: _width),
-            EventsPage(width: _width),
+            EventsPage(),
           ],
         ),
       ),
