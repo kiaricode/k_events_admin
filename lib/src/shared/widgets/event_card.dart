@@ -48,7 +48,9 @@ class EventCard extends StatelessWidget {
                     size: 17,
                   ),
                 ),
-                InkWell(onTap: () {}, child: Icon(Icons.more_horiz, size: 30)),
+                InkWell(
+                    onTap: () {},
+                    child: const Icon(Icons.more_horiz, size: 30)),
               ],
             ),
             const SizedBox(height: 4),
