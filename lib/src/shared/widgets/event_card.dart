@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
+import 'package:k_events_admin/src/shared/widgets/event_category_label.dart';
 
 import '../themes/app_colors.dart';
 import 'app_title.dart';
@@ -15,7 +16,7 @@ class EventCard extends StatelessWidget {
 
     return Container(
       width: 344,
-      height: 136,
+      height: 140,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
@@ -43,7 +44,7 @@ class EventCard extends StatelessWidget {
                 const SizedBox(
                   width: 160,
                   child: CustomText(
-                    text: "Game Over",
+                    text: "Game Over Dero...",
                     fontWeight: FontWeight.bold,
                     size: 17,
                   ),
@@ -59,8 +60,8 @@ class EventCard extends StatelessWidget {
               text: "10 de Oct, 20:00",
               iconData: Icons.date_range,
             ),
-            const SizedBox(height: 18),
-            
+            const SizedBox(height: 10),
+            const EventCategoryLabel(text: "House Party")
           ],
         )
       ]),
