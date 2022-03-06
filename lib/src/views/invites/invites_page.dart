@@ -5,8 +5,8 @@ import 'package:k_events_admin/src/shared/widgets/text_field.dart';
 import '../../shared/widgets/app_text_button.dart';
 import '../../shared/widgets/event_card.dart';
 
-class EventsPage extends StatelessWidget {
-  const EventsPage({Key? key}) : super(key: key);
+class InvitesPage extends StatelessWidget {
+  const InvitesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
