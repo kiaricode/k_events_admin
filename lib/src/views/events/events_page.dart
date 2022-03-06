@@ -4,6 +4,7 @@ import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 import 'package:k_events_admin/src/shared/widgets/text_field.dart';
 
 import '../../shared/widgets/app_text_button.dart';
+import '../../shared/widgets/event_card.dart';
 
 class EventsPage extends StatelessWidget {
   const EventsPage({Key? key}) : super(key: key);
@@ -47,6 +48,7 @@ class EventsPage extends StatelessWidget {
           fontWeight: FontWeight.w600,
         ),
         const SizedBox(height: 20),
+        const EventCard(),
       ]),
     );
   }
