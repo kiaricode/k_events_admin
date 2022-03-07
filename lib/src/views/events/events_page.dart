@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:k_events_admin/src/shared/themes/app_colors.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
+import 'package:k_events_admin/src/shared/widgets/events_schedule.dart';
 import 'package:k_events_admin/src/shared/widgets/text_field.dart';
 
 import '../../shared/widgets/app_text_button.dart';
@@ -14,7 +15,7 @@ class EventsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     return Expanded(
       child: SingleChildScrollView(
           controller: ScrollController(keepScrollOffset: true),
@@ -48,16 +49,6 @@ class EventsPage extends StatelessWidget {
                                   iconData: Icons.filter_alt,
                                 ),
                                 AppTextButton(text: "", iconData: Icons.add),
-                                // const Expanded(child: SizedBox()),
-                                // SizedBox(
-                                //   height: 40,
-                                //   child: ElevatedButton(
-                                //       onPressed: () {},
-                                //       child: const CustomText(
-                                //         text: "Adicionar Evento",
-                                //         color: Colors.white,
-                                //       )),
-                                // ),
                               ],
                             ),
                             const SizedBox(height: 38),
@@ -107,6 +98,10 @@ class EventsPage extends StatelessWidget {
                                 children: const [
                                   EventCard(),
                                   EventCard(),
+                                  EventCard(),
+                                  EventCard(),
+                                  EventCard(),
+                                  EventCard(),
                                 ],
                               ),
                             ),
@@ -114,10 +109,7 @@ class EventsPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  width: 350,
-                  color: Colors.grey,
-                ),
+                const EventsSchedule(),
               ],
             ),
           )),
