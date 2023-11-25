@@ -14,7 +14,7 @@ class EventCard extends StatelessWidget {
         "https://media.istockphoto.com/photos/abstract-background-wallpaper-picture-id952039286?s=612x612";
 
     return Container(
-      width: 380,
+      width: 400,
       height: 140,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -33,34 +33,25 @@ class EventCard extends StatelessWidget {
               )),
         ),
         const SizedBox(width: 10),
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                const SizedBox(
-                  width: 190,
-                  child: CustomText(
-                    text: "Game Over Dero...",
-                    fontWeight: FontWeight.bold,
-                    size: 17,
-                  ),
-                ),
-                InkWell(
-                    onTap: () {},
-                    child: const Icon(Icons.more_horiz, size: 30)),
-              ],
+            SizedBox(height: 10),
+            SizedBox(
+              child: CustomText(
+                text: "O Reencontro",
+                fontWeight: FontWeight.bold,
+                size: 17,
+              ),
             ),
-            const SizedBox(height: 4),
-            const AppTitle(text: "2.000,00 kz", iconData: Icons.price_change),
-            const AppTitle(
+            SizedBox(height: 4),
+            AppTitle(text: "2.000,00 kz", iconData: Icons.price_change),
+            AppTitle(
               text: "10 de Oct, 20:00",
               iconData: Icons.date_range,
             ),
-            const SizedBox(height: 10),
-            const EventCategoryLabel(text: "House Party")
+            SizedBox(height: 10),
+            EventCategoryLabel(text: "House Party")
           ],
         )
       ]),

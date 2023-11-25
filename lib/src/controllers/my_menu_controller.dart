@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:k_events_admin/src/shared/constants/menus_model.dart';
 
-class MenuController extends ChangeNotifier {
-  // static MenuController instance = MenuController();
+class MyMenuController extends ChangeNotifier {
+  // static MyMenuController instance = MyMenuController();
   var isOpen = true;
   var activeItem = MenusModel.topMenus().first.name;
   var hoverItem = "";

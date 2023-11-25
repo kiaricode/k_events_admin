@@ -1,8 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:k_events_admin/src/controllers/menu_controller.dart';
+import 'package:k_events_admin/src/app_widget.dart';
+import 'package:k_events_admin/src/controllers/my_menu_controller.dart';
 import 'package:provider/provider.dart';
-
-import 'src/app_widget.dart';
+import 'package:flutter/material.dart';
 
 // void main() {
 //   runApp(const AppWidget());
@@ -11,7 +10,8 @@ import 'src/app_widget.dart';
 void main() {
   return runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider<MenuController>(create: (_) => MenuController()),
+      ChangeNotifierProvider<MyMenuController>(
+          create: (_) => MyMenuController()),
     ],
     child: const AppWidget(),
   ));

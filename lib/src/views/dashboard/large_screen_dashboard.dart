@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:k_events_admin/src/controllers/menu_controller.dart';
+import 'package:k_events_admin/src/controllers/my_menu_controller.dart';
 import 'package:provider/provider.dart';
 
 import '../../shared/widgets/custom_text.dart';
@@ -15,7 +15,7 @@ class LargeScreenDashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var state = context.watch<MenuController>();
+    var state = context.watch<MyMenuController>();
     return Column(
       children: [
         const SizedBox(height: 20),
