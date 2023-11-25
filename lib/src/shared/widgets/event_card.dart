@@ -33,9 +33,9 @@ class EventCard extends StatelessWidget {
               )),
         ),
         const SizedBox(width: 10),
-        Column(
+        const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             SizedBox(height: 10),
             SizedBox(
               child: CustomText(

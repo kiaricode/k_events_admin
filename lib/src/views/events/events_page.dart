@@ -1,6 +1,4 @@
-import 'package:charts_flutter/flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:k_events_admin/src/shared/themes/app_colors.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 import 'package:k_events_admin/src/shared/widgets/events_schedule.dart';
@@ -8,7 +6,6 @@ import 'package:k_events_admin/src/shared/widgets/text_field.dart';
 
 import '../../shared/widgets/app_text_button.dart';
 import '../../shared/widgets/event_card.dart';
-import '../../shared/widgets/event_card2.dart';
 
 class EventsPage extends StatelessWidget {
   const EventsPage({Key? key}) : super(key: key);
@@ -36,8 +33,8 @@ class EventsPage extends StatelessWidget {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: const [
+                            const Row(
+                              children: [
                                 AppTextField(
                                   label: "Pesquisar",
                                   hintText: "Pesquisar...",
@@ -64,8 +61,8 @@ class EventsPage extends StatelessWidget {
                             const SizedBox(height: 20),
                             Container(
                               margin: const EdgeInsets.only(left: 8),
-                              child: Row(
-                                children: const [
+                              child: const Row(
+                                children: [
                                   CustomText(
                                     text: "Todos",
                                     color: AppColors.gray,
@@ -89,13 +86,13 @@ class EventsPage extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(height: 18),
-                            SizedBox(
+                            const SizedBox(
                               width: double.infinity,
                               child: Wrap(
                                 spacing: 14,
                                 runSpacing: 18,
                                 alignment: WrapAlignment.spaceBetween,
-                                children: const [
+                                children: [
                                   EventCard(),
                                   EventCard(),
                                   EventCard(),

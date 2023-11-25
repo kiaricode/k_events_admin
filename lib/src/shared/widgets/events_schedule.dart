@@ -3,7 +3,6 @@ import 'package:k_events_admin/src/shared/themes/app_colors.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 import 'custom_text.dart';
-import 'events_calendar_example.dart';
 import 'example.dart';
 
 class EventsSchedule extends StatelessWidget {
@@ -12,7 +11,7 @@ class EventsSchedule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var currentDate = DateTime.now();
+    // var currentDate = DateTime.now();
     return Row(
       children: [
         Container(
@@ -42,7 +41,7 @@ class EventsSchedule extends StatelessWidget {
               SizedBox(
                 width: 322,
                 height: size.height * 0.8,
-                child: TableBasicsExample(),
+                child: const TableBasicsExample(),
               )
             ],
           ),

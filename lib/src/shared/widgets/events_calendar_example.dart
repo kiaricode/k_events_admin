@@ -4,11 +4,13 @@ import 'package:table_calendar/table_calendar.dart';
 import '../constants/utils.dart';
 
 class TableEventsExample extends StatefulWidget {
+  const TableEventsExample({Key? key}) : super(key: key);
+
   @override
-  _TableEventsExampleState createState() => _TableEventsExampleState();
+  TableEventsExampleState createState() => TableEventsExampleState();
 }
 
-class _TableEventsExampleState extends State<TableEventsExample> {
+class TableEventsExampleState extends State<TableEventsExample> {
   late final ValueNotifier<List<Event>> _selectedEvents;
   CalendarFormat _calendarFormat = CalendarFormat.month;
   RangeSelectionMode _rangeSelectionMode = RangeSelectionMode
@@ -129,7 +131,6 @@ class _TableEventsExampleState extends State<TableEventsExample> {
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: ListTile(
-                      onTap: () => print('${value[index]}'),
                       title: Text('${value[index]}'),
                     ),
                   );

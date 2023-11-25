@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
-import 'package:k_events_admin/src/shared/widgets/event_category_label.dart';
 
 import '../themes/app_colors.dart';
 import 'app_title.dart';
@@ -37,11 +36,11 @@ class EventCard2 extends StatelessWidget {
               )),
         ),
         const SizedBox(width: 10),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        const Padding(
+          padding: EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
+            children: [
               SizedBox(height: 10),
               SizedBox(
                 child: CustomText(

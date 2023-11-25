@@ -10,7 +10,7 @@ class InvitesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
+    // var size = MediaQuery.of(context).size;
     return Expanded(
       child: SingleChildScrollView(
         controller: ScrollController(keepScrollOffset: true),
@@ -23,8 +23,8 @@ class InvitesPage extends StatelessWidget {
           ),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Row(
-              children: const [
+            const Row(
+              children: [
                 AppTextField(
                   label: "Pesquisar",
                   hintText: "Pesquisar...",
@@ -48,13 +48,13 @@ class InvitesPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            SizedBox(
+            const SizedBox(
               width: double.infinity,
               child: Wrap(
                 spacing: 10,
                 runSpacing: 18,
                 alignment: WrapAlignment.start,
-                children: const [
+                children: [
                   EventCard(),
                   EventCard(),
                   EventCard(),

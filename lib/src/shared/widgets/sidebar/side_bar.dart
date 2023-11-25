@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:k_events_admin/src/controllers/menu_controller.dart';
+import 'package:k_events_admin/src/controllers/my_menu_controller.dart';
 import 'package:provider/provider.dart';
 
 import '../../themes/app_colors.dart';
@@ -13,7 +13,7 @@ class SideBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final state = context.watch<MenuController>();
+    final state = context.watch<MyMenuController>();
     return Container(
       width: state.isOpen ? 280 : 60,
       height: double.infinity,

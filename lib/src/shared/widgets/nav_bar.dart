@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:k_events_admin/src/controllers/menu_controller.dart';
+import 'package:k_events_admin/src/controllers/my_menu_controller.dart';
 import 'package:provider/provider.dart';
 
 import '../themes/app_colors.dart';
@@ -16,7 +16,7 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var state = context.read<MenuController>();
+    var state = context.read<MyMenuController>();
     return Container(
       height: 60,
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
@@ -42,7 +42,7 @@ class NavBar extends StatelessWidget {
         ),
         const SizedBox(width: 20),
         CustomText(
-          text: context.watch<MenuController>().activeItem,
+          text: context.watch<MyMenuController>().activeItem,
           color: AppColors.dark,
           size: 20,
           fontWeight: FontWeight.bold,

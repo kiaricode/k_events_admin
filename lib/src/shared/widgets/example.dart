@@ -3,16 +3,16 @@ import 'package:k_events_admin/src/shared/themes/app_colors.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-import '../constants/utils.dart';
-
 class TableBasicsExample extends StatefulWidget {
+  const TableBasicsExample({Key? key}) : super(key: key);
+
   @override
-  _TableBasicsExampleState createState() => _TableBasicsExampleState();
+  TableBasicsExampleState createState() => TableBasicsExampleState();
 }
 
-class _TableBasicsExampleState extends State<TableBasicsExample> {
+class TableBasicsExampleState extends State<TableBasicsExample> {
   CalendarFormat _calendarFormat = CalendarFormat.month;
-  DateTime _focusedDay = DateTime.now();
+  DateTime focusedDay = DateTime.now();
   DateTime? _selectedDay;
 
   @override
@@ -38,7 +38,7 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
         if (!isSameDay(_selectedDay, selectedDay)) {
           setState(() {
             _selectedDay = selectedDay;
-            _focusedDay = focusedDay;
+            focusedDay = focusedDay;
           });
         }
       },
@@ -52,7 +52,7 @@ class _TableBasicsExampleState extends State<TableBasicsExample> {
       },
       onPageChanged: (focusedDay) {
         // No need to call `setState()` here
-        _focusedDay = focusedDay;
+        focusedDay = focusedDay;
       },
       calendarStyle: const CalendarStyle(
         canMarkersOverflow: true,

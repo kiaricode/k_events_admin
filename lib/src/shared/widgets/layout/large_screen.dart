@@ -11,13 +11,13 @@ class LargeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var _size = MediaQuery.of(context).size;
+    // var _size = MediaQuery.of(context).size;
 
-    return Row(children: [
-      const SideBar(),
+    return const Row(children: [
+      SideBar(),
       Expanded(
         child: Column(
-          children: const [
+          children: [
             NavBar(),
             // LargeScreenDashboard(width: _width),
             EventsPage(),

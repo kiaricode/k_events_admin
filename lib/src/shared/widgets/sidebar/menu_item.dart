@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:k_events_admin/src/controllers/my_menu_controller.dart';
 import 'package:k_events_admin/src/shared/themes/app_colors.dart';
 import 'package:k_events_admin/src/shared/widgets/custom_text.dart';
 import 'package:provider/provider.dart';
-
-import '../../../controllers/menu_controller.dart';
 
 class MenuItem extends StatelessWidget {
   final String name;
@@ -17,7 +16,7 @@ class MenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final state = context.watch<MenuController>();
+    final state = context.watch<MyMenuController>();
 
     return Container(
       margin: const EdgeInsets.only(right: 10, left: 10, bottom: 10),
